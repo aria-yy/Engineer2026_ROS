@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="hjarm_golden">
+
+    <!-- Base link (optional world-fixed frame) -->
+    <link name="hjarm_golden" />
+    <joint name="hjarm_golden_joint" type="fixed">
+        <parent link="hjarm_golden" />
+        <child link="base_link" />
+        <origin xyz="0 0 0.1" rpy="0 0 0"/>
+    </joint>
+
+    <!-- base_link -->
+    <link name="base_link">
+        <inertial>
+            <origin xyz="3.3161E-05 -1.5028E-05 -0.015945" rpy="0 0 0" />
+            <mass value="0.61411" />
+            <inertia ixx="0.00081132" ixy="-1.6992E-07" ixz="-1.6229E-08" iyy="0.00072202" iyz="6.1775E-09" izz="0.001416" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hjarm_golden/meshes/base_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.75294 0.75294 0.75294 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hjarm_golden/meshes/base_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Link1 -->
+    <link name="Link1">
+        <inertial>
+            <origin xyz="-0.074266 0.011815 3.0696E-06" rpy="0 0 0" />
+            <mass value="0.73371" />
+            <inertia ixx="0.0005847" ixy="2.4929E-06" ixz="-2.128E-06" iyy="0.00080459" iyz="-9.4598E-08" izz="0.00046838" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hjarm_golden/meshes/Link1.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.75294 0.75294 0.75294 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hjarm_golden/meshes/Link1.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint1" type="revolute">
+        <origin xyz="0 0 0" rpy="1.5708 1.5708 0" />
+        <parent link="base_link" />
+        <child link="Link1" />
+        <axis xyz="-1 0 0" />
+        <limit lower="-3.14" upper="3.14" effort="50" velocity="0.1" />
+    </joint>
+
+    <!-- Link2 -->
+    <link name="Link2">
+        <inertial>
+            <origin xyz="-0.16698 -0.011966 -0.17283" rpy="0 0 0" />
+            <mass value="0.70058" />
+            <inertia ixx="0.0006596" ixy="-3.4043E-06" ixz="-0.0003414" iyy="0.0012495" iyz="-3.2042E-06" izz="0.00063539" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hjarm_golden/meshes/Link2.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.75294 0.75294 0.75294 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hjarm_golden/meshes/Link2.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint2" type="revolute">
+        <origin xyz="-0.0872 -0.0225 0" rpy="0 0 0" />
+        <parent link="Link1" />
+        <child link="Link2" />
+        <axis xyz="0 -1 0" />
+        <limit lower="-2.53" upper="0" effort="50" velocity="0.1" />
+    </joint>
+
+    <!-- Link3 -->
+    <link name="Link3">
+        <inertial>
+            <origin xyz="0.0044216 -0.052434 1.1034E-05" rpy="0 0 0" />
+            <mass value="0.38094" />
+            <inertia ixx="0.00019473" ixy="1.9237E-07" ixz="-8.5492E-08" iyy="0.0001481" iyz="-1.1071E-08" izz="0.00018078" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hjarm_golden/meshes/Link3.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.75294 0.75294 0.75294 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hjarm_golden/meshes/Link3.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint3" type="revolute">
+        <origin xyz="-0.23142 0.0336 -0.23951" rpy="-1.9024 0 -1.5708" />
+        <parent link="Link2" />
+        <child link="Link3" />
+        <axis xyz="-1 0 0" />
+        <limit lower="-4.06" upper="0" effort="35" velocity="0.1" />
+    </joint>
+
+    <!-- Link4 -->
+    <link name="Link4">
+        <inertial>
+            <origin xyz="-0.072787 0.00059635 1.3776E-05" rpy="0 0 0" />
+            <mass value="0.33896" />
+            <inertia ixx="0.00013548" ixy="1.3168E-05" ixz="-5.9813E-06" iyy="0.00031257" iyz="3.3431E-08" izz="0.00035055" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hjarm_golden/meshes/Link4.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hjarm_golden/meshes/Link4.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint4" type="revolute">
+        <origin xyz="0 -0.1294 0" rpy="-1.5708 0 1.5708" />
+        <parent link="Link3" />
+        <child link="Link4" />
+        <axis xyz="-1 0 0" />
+        <limit lower="-3.14" upper="3.14" effort="15" velocity="0.1" />
+    </joint>
+
+    <!-- Link5 -->
+    <link name="Link5">
+        <inertial>
+            <origin xyz="0.0014631 -2.4696E-05 4.1757E-10" rpy="0 0 0" />
+            <mass value="0.030251" />
+            <inertia ixx="2.4728E-06" ixy="9.771E-14" ixz="2.8972E-13" iyy="3.4415E-06" iyz="3.9363E-15" izz="3.1278E-06" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hjarm_golden/meshes/Link5.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.79608 0.82353 0.93725 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://hjarm_golden/meshes/Link5.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint5" type="revolute">
+        <origin xyz="-0.17375 0.018 0" rpy="2.9986 -1.5708 0" />
+        <parent link="Link4" />
+        <child link="Link5" />
+        <axis xyz="1 0 0" />
+        <limit lower="0" upper="2.55" effort="15" velocity="0.1" />
+    </joint>
+
+    <!-- Link6 -->
+    <link name="Link6">
+        <inertial>
+            <origin xyz="0.022981 -1.1912E-09 4.4528E-09" rpy="0 0 0" />
+            <mass value="0.089817" />
+            <inertia ixx="6.7899E-05" ixy="-1.9452E-13" ixz="-8.7988E-13" iyy="3.7367E-05" iyz="3.5967E-13" izz="3.7367E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 3.14159 0" />
+            <geometry>
+                <mesh filename="package://hjarm_golden/meshes/Link6.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.79608 0.82353 0.93725 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 3.14159 0" />
+            <geometry>
+                <mesh filename="package://hjarm_golden/meshes/Link6.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint6" type="revolute">
+        <origin xyz="0 0 0" rpy="3.1416 0 1.5708" />
+        <parent link="Link5" />
+        <child link="Link6" />
+        <axis xyz="1 0 0" />
+        <limit lower="-3.14" upper="3.14" effort="15" velocity="0.1" />
+    </joint>
+
+    <transmission name="trans_joint1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint1">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint1_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint2">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint2_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint3">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint3_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint4">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint4">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint4_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint5">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint5">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint5_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint6">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint6">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint6_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+
+
+</robot>
