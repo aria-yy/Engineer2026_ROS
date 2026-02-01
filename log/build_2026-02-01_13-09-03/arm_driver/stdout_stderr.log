@@ -1,0 +1,55 @@
+[  3%] Built target arm_driver__cpp
+[ 12%] Built target arm_driver__rosidl_generator_c
+[ 12%] Built target ament_cmake_python_copy_arm_driver
+[ 36%] Built target arm_driver__rosidl_typesupport_fastrtps_cpp
+[ 36%] Built target arm_driver__rosidl_typesupport_introspection_c
+[ 39%] Built target arm_driver__rosidl_typesupport_c
+[ 48%] Built target arm_driver__rosidl_typesupport_cpp
+[ 57%] Built target arm_driver__rosidl_typesupport_introspection_cpp
+[ 66%] Built target arm_driver__rosidl_typesupport_fastrtps_c
+[ 66%] Built target arm_driver
+[ 69%] Built target arm_driver__py
+[ 72%] [32mBuilding CXX object CMakeFiles/hjarm_engineer_node.dir/src/hjarm_engineer.cpp.o[0m
+[ 78%] Built target arm_driver__rosidl_generator_py
+[ 96%] Built target arm_driver__rosidl_typesupport_fastrtps_c__pyext
+[ 96%] Built target arm_driver__rosidl_typesupport_introspection_c__pyext
+[ 96%] Built target arm_driver__rosidl_typesupport_c__pyext
+running egg_info
+writing arm_driver.egg-info/PKG-INFO
+writing dependency_links to arm_driver.egg-info/dependency_links.txt
+writing top-level names to arm_driver.egg-info/top_level.txt
+reading manifest file 'arm_driver.egg-info/SOURCES.txt'
+writing manifest file 'arm_driver.egg-info/SOURCES.txt'
+[ 96%] Built target ament_cmake_python_build_arm_driver_egg
+[01m[K/home/hanjiang/Desktop/my_try/my_try_ws/src/arm_driver/src/hjarm_engineer.cpp:[m[K In member function ‘[01m[Kvoid HjarmEngineer::execute_trajectory(std::shared_ptr<rclcpp_action::ServerGoalHandle<control_msgs::action::FollowJointTrajectory> >)[m[K’:
+[01m[K/home/hanjiang/Desktop/my_try/my_try_ws/src/arm_driver/src/hjarm_engineer.cpp:222:65:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KHjarmEngineer::make_shared<control_msgs::action::FollowJointTrajectory::Feedback>()[m[K’
+  222 |     auto feedback = [01;31m[Kmake_shared<FollowJointTrajectory::Feedback>()[m[K;
+      |                     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/context.hpp:35[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:34[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/hanjiang/Desktop/my_try/my_try_ws/src/arm_driver/include/arm_driver/hjarm_engineer.h:5[m[K,
+                 from [01m[K/home/hanjiang/Desktop/my_try/my_try_ws/src/arm_driver/src/hjarm_engineer.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:80:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstatic std::shared_ptr<rclcpp::Node> rclcpp::Node::make_shared(Args&& ...) [with Args = {control_msgs::action::FollowJointTrajectory_Feedback_<std::allocator<void> >}][m[K’
+   80 |   [01;36m[KRCLCPP_SMART_PTR_DEFINITIONS[m[K(Node)
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:80:3:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/hanjiang/Desktop/my_try/my_try_ws/src/arm_driver/src/hjarm_engineer.cpp:223:61:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KHjarmEngineer::make_shared<control_msgs::action::FollowJointTrajectory::Result>()[m[K’
+  223 |     auto result = [01;31m[Kmake_shared<FollowJointTrajectory::Result>()[m[K;
+      |                   [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/context.hpp:35[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:34[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/hanjiang/Desktop/my_try/my_try_ws/src/arm_driver/include/arm_driver/hjarm_engineer.h:5[m[K,
+                 from [01m[K/home/hanjiang/Desktop/my_try/my_try_ws/src/arm_driver/src/hjarm_engineer.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:80:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstatic std::shared_ptr<rclcpp::Node> rclcpp::Node::make_shared(Args&& ...) [with Args = {control_msgs::action::FollowJointTrajectory_Result_<std::allocator<void> >}][m[K’
+   80 |   [01;36m[KRCLCPP_SMART_PTR_DEFINITIONS[m[K(Node)
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:80:3:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+gmake[2]: *** [CMakeFiles/hjarm_engineer_node.dir/build.make:76：CMakeFiles/hjarm_engineer_node.dir/src/hjarm_engineer.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:594：CMakeFiles/hjarm_engineer_node.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

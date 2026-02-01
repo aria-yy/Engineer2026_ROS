@@ -1,0 +1,68 @@
+[0.005s] Invoking command in '/home/hanjiang/Desktop/my_try/my_try_ws/build/mybot_moveit2': AMENT_PREFIX_PATH=/home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden:/opt/ros/humble /usr/bin/cmake /home/hanjiang/Desktop/my_try/my_try_ws/src/mybot_moveit2 -DCMAKE_INSTALL_PREFIX=/home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2
+[0.044s] -- The C compiler identification is GNU 11.4.0
+[0.081s] -- The CXX compiler identification is GNU 11.4.0
+[0.086s] -- Detecting C compiler ABI info
+[0.140s] -- Detecting C compiler ABI info - done
+[0.145s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.145s] -- Detecting C compile features
+[0.145s] -- Detecting C compile features - done
+[0.148s] -- Detecting CXX compiler ABI info
+[0.212s] -- Detecting CXX compiler ABI info - done
+[0.217s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.217s] -- Detecting CXX compile features
+[0.217s] -- Detecting CXX compile features - done
+[0.219s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.312s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.401s] -- Configuring done
+[0.402s] -- Generating done
+[0.403s] -- Build files have been written to: /home/hanjiang/Desktop/my_try/my_try_ws/build/mybot_moveit2
+[0.406s] Invoked command in '/home/hanjiang/Desktop/my_try/my_try_ws/build/mybot_moveit2' returned '0': AMENT_PREFIX_PATH=/home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden:/opt/ros/humble /usr/bin/cmake /home/hanjiang/Desktop/my_try/my_try_ws/src/mybot_moveit2 -DCMAKE_INSTALL_PREFIX=/home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2
+[0.407s] Invoking command in '/home/hanjiang/Desktop/my_try/my_try_ws/build/mybot_moveit2': AMENT_PREFIX_PATH=/home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden:/opt/ros/humble /usr/bin/cmake --build /home/hanjiang/Desktop/my_try/my_try_ws/build/mybot_moveit2 -- -j20 -l20
+[0.432s] Invoked command in '/home/hanjiang/Desktop/my_try/my_try_ws/build/mybot_moveit2' returned '0': AMENT_PREFIX_PATH=/home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden:/opt/ros/humble /usr/bin/cmake --build /home/hanjiang/Desktop/my_try/my_try_ws/build/mybot_moveit2 -- -j20 -l20
+[0.433s] Invoking command in '/home/hanjiang/Desktop/my_try/my_try_ws/build/mybot_moveit2': AMENT_PREFIX_PATH=/home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden:/opt/ros/humble /usr/bin/cmake --install /home/hanjiang/Desktop/my_try/my_try_ws/build/mybot_moveit2
+[0.438s] -- Install configuration: ""
+[0.438s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/ament_index/resource_index/package_run_dependencies/mybot_moveit2
+[0.438s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/ament_index/resource_index/parent_prefix_path/mybot_moveit2
+[0.438s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/environment/ament_prefix_path.sh
+[0.438s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/environment/ament_prefix_path.dsv
+[0.438s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/environment/path.sh
+[0.438s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/environment/path.dsv
+[0.439s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/local_setup.bash
+[0.439s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/local_setup.sh
+[0.439s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/local_setup.zsh
+[0.439s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/local_setup.dsv
+[0.439s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/package.dsv
+[0.439s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/ament_index/resource_index/packages/mybot_moveit2
+[0.439s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/cmake/mybot_moveit2Config.cmake
+[0.439s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/cmake/mybot_moveit2Config-version.cmake
+[0.439s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/package.xml
+[0.439s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/launch
+[0.439s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/launch/gazebo.launch.py
+[0.439s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/launch/spawn_controllers.launch.py
+[0.439s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/launch/setup_assistant.launch.py
+[0.439s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/launch/rsp.launch.py
+[0.439s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/launch/moveit_rviz.launch.py
+[0.439s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/launch/warehouse_db.launch.py
+[0.439s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/launch/move_group.launch.py
+[0.439s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/launch/static_virtual_joint_tfs.launch.py
+[0.440s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/launch/demo.launch.py
+[0.440s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/lib/mybot_moveit2/moveit2_arm_control
+[0.440s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/lib/mybot_moveit2/check_point
+[0.440s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/config
+[0.440s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/config/initial_positions.yaml
+[0.440s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/config/sensors_3d.yaml
+[0.440s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/config/kinematics.yaml
+[0.440s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/config/hjarm_golden.srdf
+[0.440s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/config/pilz_cartesian_limits.yaml
+[0.440s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/config/joint_limits.yaml
+[0.440s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/config/moveit.rviz
+[0.440s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/config/moveit_controllers.yaml
+[0.440s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/config/hjarm_golden.ros2_control.xacro
+[0.440s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/config/hjarm_golden.gazebo.xacro
+[0.440s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/config/ros2_controllers.yaml
+[0.440s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/config/hjarm_golden.urdf.xacro
+[0.440s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/scripts
+[0.440s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/scripts/moveit2_arm_control.py
+[0.440s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/scripts/check_point.py
+[0.441s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/mybot_moveit2/share/mybot_moveit2/.setup_assistant
+[0.442s] Invoked command in '/home/hanjiang/Desktop/my_try/my_try_ws/build/mybot_moveit2' returned '0': AMENT_PREFIX_PATH=/home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden:/opt/ros/humble /usr/bin/cmake --install /home/hanjiang/Desktop/my_try/my_try_ws/build/mybot_moveit2

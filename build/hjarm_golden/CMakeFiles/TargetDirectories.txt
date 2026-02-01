@@ -1,0 +1,9 @@
+/home/hanjiang/Desktop/my_try/my_try_ws/build/hjarm_golden/CMakeFiles/uninstall.dir
+/home/hanjiang/Desktop/my_try/my_try_ws/build/hjarm_golden/CMakeFiles/hjarm_golden_uninstall.dir
+/home/hanjiang/Desktop/my_try/my_try_ws/build/hjarm_golden/CMakeFiles/test.dir
+/home/hanjiang/Desktop/my_try/my_try_ws/build/hjarm_golden/CMakeFiles/edit_cache.dir
+/home/hanjiang/Desktop/my_try/my_try_ws/build/hjarm_golden/CMakeFiles/rebuild_cache.dir
+/home/hanjiang/Desktop/my_try/my_try_ws/build/hjarm_golden/CMakeFiles/list_install_components.dir
+/home/hanjiang/Desktop/my_try/my_try_ws/build/hjarm_golden/CMakeFiles/install.dir
+/home/hanjiang/Desktop/my_try/my_try_ws/build/hjarm_golden/CMakeFiles/install/local.dir
+/home/hanjiang/Desktop/my_try/my_try_ws/build/hjarm_golden/CMakeFiles/install/strip.dir

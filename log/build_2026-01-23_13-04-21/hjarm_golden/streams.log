@@ -1,0 +1,50 @@
+[0.007s] Invoking command in '/home/hanjiang/Desktop/my_try/my_try_ws/build/hjarm_golden': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/hanjiang/Desktop/my_try/my_try_ws/src/hjarm_golden -DCMAKE_INSTALL_PREFIX=/home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden
+[0.144s] -- The C compiler identification is GNU 11.4.0
+[0.235s] -- The CXX compiler identification is GNU 11.4.0
+[0.241s] -- Detecting C compiler ABI info
+[0.293s] -- Detecting C compiler ABI info - done
+[0.302s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.303s] -- Detecting C compile features
+[0.303s] -- Detecting C compile features - done
+[0.305s] -- Detecting CXX compiler ABI info
+[0.365s] -- Detecting CXX compiler ABI info - done
+[0.370s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.371s] -- Detecting CXX compile features
+[0.371s] -- Detecting CXX compile features - done
+[0.376s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.479s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.584s] -- Configuring done
+[0.585s] -- Generating done
+[0.586s] -- Build files have been written to: /home/hanjiang/Desktop/my_try/my_try_ws/build/hjarm_golden
+[0.589s] Invoked command in '/home/hanjiang/Desktop/my_try/my_try_ws/build/hjarm_golden' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/hanjiang/Desktop/my_try/my_try_ws/src/hjarm_golden -DCMAKE_INSTALL_PREFIX=/home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden
+[0.590s] Invoking command in '/home/hanjiang/Desktop/my_try/my_try_ws/build/hjarm_golden': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hanjiang/Desktop/my_try/my_try_ws/build/hjarm_golden -- -j20 -l20
+[0.614s] Invoked command in '/home/hanjiang/Desktop/my_try/my_try_ws/build/hjarm_golden' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hanjiang/Desktop/my_try/my_try_ws/build/hjarm_golden -- -j20 -l20
+[0.620s] Invoking command in '/home/hanjiang/Desktop/my_try/my_try_ws/build/hjarm_golden': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/hanjiang/Desktop/my_try/my_try_ws/build/hjarm_golden
+[0.625s] -- Install configuration: ""
+[0.625s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/hjarm_golden/meshes
+[0.625s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/hjarm_golden/meshes/Link4.STL
+[0.625s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/hjarm_golden/meshes/Link2.STL
+[0.626s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/hjarm_golden/meshes/Link1.STL
+[0.626s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/hjarm_golden/meshes/base_link.STL
+[0.627s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/hjarm_golden/meshes/Link5.STL
+[0.627s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/hjarm_golden/meshes/Link6.STL
+[0.628s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/hjarm_golden/meshes/Link3.STL
+[0.632s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/hjarm_golden/urdf
+[0.632s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/hjarm_golden/urdf/hjarm_golden.urdf
+[0.632s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/hjarm_golden/urdf/hjarm_golden.csv
+[0.632s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/ament_index/resource_index/package_run_dependencies/hjarm_golden
+[0.632s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/ament_index/resource_index/parent_prefix_path/hjarm_golden
+[0.632s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/hjarm_golden/environment/ament_prefix_path.sh
+[0.632s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/hjarm_golden/environment/ament_prefix_path.dsv
+[0.633s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/hjarm_golden/environment/path.sh
+[0.633s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/hjarm_golden/environment/path.dsv
+[0.633s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/hjarm_golden/local_setup.bash
+[0.633s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/hjarm_golden/local_setup.sh
+[0.633s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/hjarm_golden/local_setup.zsh
+[0.633s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/hjarm_golden/local_setup.dsv
+[0.633s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/hjarm_golden/package.dsv
+[0.633s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/ament_index/resource_index/packages/hjarm_golden
+[0.633s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/hjarm_golden/cmake/hjarm_goldenConfig.cmake
+[0.633s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/hjarm_golden/cmake/hjarm_goldenConfig-version.cmake
+[0.633s] -- Installing: /home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden/share/hjarm_golden/package.xml
+[0.634s] Invoked command in '/home/hanjiang/Desktop/my_try/my_try_ws/build/hjarm_golden' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/hanjiang/Desktop/my_try/my_try_ws/build/hjarm_golden

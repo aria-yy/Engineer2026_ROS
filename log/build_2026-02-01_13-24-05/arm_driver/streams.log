@@ -1,0 +1,35 @@
+[0.008s] Invoking command in '/home/hanjiang/Desktop/my_try/my_try_ws/build/arm_driver': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hanjiang/Desktop/my_try/my_try_ws/build/arm_driver -- -j20 -l20
+[0.046s] [  3%] Built target arm_driver__cpp
+[0.046s] [ 12%] Built target arm_driver__rosidl_generator_c
+[0.051s] [ 12%] Built target ament_cmake_python_copy_arm_driver
+[0.061s] [ 21%] Built target arm_driver__rosidl_typesupport_c
+[0.061s] [ 30%] Built target arm_driver__rosidl_typesupport_cpp
+[0.064s] [ 39%] Built target arm_driver__rosidl_typesupport_introspection_cpp
+[0.065s] [ 48%] Built target arm_driver__rosidl_typesupport_fastrtps_cpp
+[0.067s] [ 57%] Built target arm_driver__rosidl_typesupport_introspection_c
+[0.067s] [ 66%] Built target arm_driver__rosidl_typesupport_fastrtps_c
+[0.082s] [ 66%] Built target arm_driver
+[0.093s] [35m[1mConsolidate compiler generated dependencies of target hjarm_engineer_node[0m
+[0.098s] [ 69%] Built target arm_driver__py
+[0.109s] [ 72%] [32mBuilding CXX object CMakeFiles/hjarm_engineer_node.dir/src/hjarm_engineer.cpp.o[0m
+[0.115s] [ 78%] Built target arm_driver__rosidl_generator_py
+[0.132s] [ 84%] Built target arm_driver__rosidl_typesupport_fastrtps_c__pyext
+[0.132s] [ 96%] Built target arm_driver__rosidl_typesupport_introspection_c__pyext
+[0.133s] [ 96%] Built target arm_driver__rosidl_typesupport_c__pyext
+[0.206s] running egg_info
+[0.207s] writing arm_driver.egg-info/PKG-INFO
+[0.207s] writing dependency_links to arm_driver.egg-info/dependency_links.txt
+[0.207s] writing top-level names to arm_driver.egg-info/top_level.txt
+[0.208s] reading manifest file 'arm_driver.egg-info/SOURCES.txt'
+[0.209s] writing manifest file 'arm_driver.egg-info/SOURCES.txt'
+[0.228s] [ 96%] Built target ament_cmake_python_build_arm_driver_egg
+[3.653s] [100%] [32m[1mLinking CXX executable hjarm_engineer_node[0m
+[3.805s] /usr/bin/ld: CMakeFiles/hjarm_engineer_node.dir/src/hjarm_engineer.cpp.o: in function `HjarmEngineer::HjarmEngineer(rclcpp::NodeOptions const&)':
+[3.805s] hjarm_engineer.cpp:(.text+0x9f0): undefined reference to `HjarmEngineer::handle_accepted(std::shared_ptr<rclcpp_action::ServerGoalHandle<control_msgs::action::FollowJointTrajectory> >)'
+[3.805s] /usr/bin/ld: hjarm_engineer.cpp:(.text+0xa54): undefined reference to `HjarmEngineer::handle_cancel(std::shared_ptr<rclcpp_action::ServerGoalHandle<control_msgs::action::FollowJointTrajectory> >)'
+[3.806s] /usr/bin/ld: hjarm_engineer.cpp:(.text+0xab8): undefined reference to `HjarmEngineer::handle_goal(std::array<unsigned char, 16ul> const&, std::shared_ptr<control_msgs::action::FollowJointTrajectory_Goal_<std::allocator<void> > const>)'
+[3.819s] collect2: error: ld returned 1 exit status
+[3.821s] gmake[2]: *** [CMakeFiles/hjarm_engineer_node.dir/build.make:219：hjarm_engineer_node] 错误 1
+[3.821s] gmake[1]: *** [CMakeFiles/Makefile2:594：CMakeFiles/hjarm_engineer_node.dir/all] 错误 2
+[3.821s] gmake: *** [Makefile:146：all] 错误 2
+[3.823s] Invoked command in '/home/hanjiang/Desktop/my_try/my_try_ws/build/arm_driver' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hanjiang/Desktop/my_try/my_try_ws/build/arm_driver -- -j20 -l20

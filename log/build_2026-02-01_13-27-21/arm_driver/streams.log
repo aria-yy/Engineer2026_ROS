@@ -1,0 +1,36 @@
+[0.007s] Invoking command in '/home/hanjiang/Desktop/my_try/my_try_ws/build/arm_driver': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hanjiang/Desktop/my_try/my_try_ws/build/arm_driver -- -j20 -l20
+[0.048s] [  3%] Built target arm_driver__cpp
+[0.049s] [ 12%] Built target arm_driver__rosidl_generator_c
+[0.057s] [ 12%] Built target ament_cmake_python_copy_arm_driver
+[0.065s] [ 21%] Built target arm_driver__rosidl_typesupport_introspection_c
+[0.066s] [ 30%] Built target arm_driver__rosidl_typesupport_c
+[0.067s] [ 39%] Built target arm_driver__rosidl_typesupport_cpp
+[0.067s] [ 48%] Built target arm_driver__rosidl_typesupport_introspection_cpp
+[0.070s] [ 57%] Built target arm_driver__rosidl_typesupport_fastrtps_cpp
+[0.074s] [ 66%] Built target arm_driver__rosidl_typesupport_fastrtps_c
+[0.088s] [ 66%] Built target arm_driver
+[0.099s] [35m[1mConsolidate compiler generated dependencies of target hjarm_engineer_node[0m
+[0.104s] [ 69%] Built target arm_driver__py
+[0.114s] [ 72%] [32mBuilding CXX object CMakeFiles/hjarm_engineer_node.dir/src/hjarm_engineer.cpp.o[0m
+[0.121s] [ 78%] Built target arm_driver__rosidl_generator_py
+[0.137s] [ 87%] Built target arm_driver__rosidl_typesupport_fastrtps_c__pyext
+[0.137s] [ 90%] Built target arm_driver__rosidl_typesupport_c__pyext
+[0.137s] [ 96%] Built target arm_driver__rosidl_typesupport_introspection_c__pyext
+[0.221s] running egg_info
+[0.222s] writing arm_driver.egg-info/PKG-INFO
+[0.222s] writing dependency_links to arm_driver.egg-info/dependency_links.txt
+[0.222s] writing top-level names to arm_driver.egg-info/top_level.txt
+[0.223s] reading manifest file 'arm_driver.egg-info/SOURCES.txt'
+[0.224s] writing manifest file 'arm_driver.egg-info/SOURCES.txt'
+[0.243s] [ 96%] Built target ament_cmake_python_build_arm_driver_egg
+[1.572s] [01m[K/home/hanjiang/Desktop/my_try/my_try_ws/src/arm_driver/src/hjarm_engineer.cpp:[m[K In constructor ‘[01m[KHjarmEngineer::HjarmEngineer(const rclcpp::NodeOptions&)[m[K’:
+[1.572s] [01m[K/home/hanjiang/Desktop/my_try/my_try_ws/src/arm_driver/src/hjarm_engineer.cpp:46:30:[m[K [01;31m[Kerror: [m[K‘[01m[Khandle_goal[m[K’ is not a member of ‘[01m[KHjarmEngineer[m[K’
+[1.572s]    46 |         bind(&HjarmEngineer::[01;31m[Khandle_goal[m[K, this, placeholders::_1, placeholders::_2),
+[1.572s]       |                              [01;31m[K^~~~~~~~~~~[m[K
+[1.572s] [01m[K/home/hanjiang/Desktop/my_try/my_try_ws/src/arm_driver/src/hjarm_engineer.cpp:47:30:[m[K [01;31m[Kerror: [m[K‘[01m[Khandle_cancel[m[K’ is not a member of ‘[01m[KHjarmEngineer[m[K’
+[1.572s]    47 |         bind(&HjarmEngineer::[01;31m[Khandle_cancel[m[K, this, placeholders::_1),
+[1.572s]       |                              [01;31m[K^~~~~~~~~~~~~[m[K
+[2.215s] gmake[2]: *** [CMakeFiles/hjarm_engineer_node.dir/build.make:76：CMakeFiles/hjarm_engineer_node.dir/src/hjarm_engineer.cpp.o] 错误 1
+[2.215s] gmake[1]: *** [CMakeFiles/Makefile2:594：CMakeFiles/hjarm_engineer_node.dir/all] 错误 2
+[2.216s] gmake: *** [Makefile:146：all] 错误 2
+[2.218s] Invoked command in '/home/hanjiang/Desktop/my_try/my_try_ws/build/arm_driver' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hanjiang/Desktop/my_try/my_try_ws/build/arm_driver -- -j20 -l20

@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "arm_driver__py",
+		"source" : "/home/hanjiang/Desktop/my_try/my_try_ws/build/arm_driver/arm_driver__py"
+	}
+}

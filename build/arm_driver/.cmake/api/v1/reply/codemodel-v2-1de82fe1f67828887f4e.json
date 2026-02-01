@@ -1,0 +1,242 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-a047aa69c23844ab3ee3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "arm_driver__py",
+					"jsonFile" : "directory-arm_driver__py-47f924abf6c43dbf7ae7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/hanjiang/Desktop/my_try/my_try_ws/build/arm_driver/arm_driver__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "arm_driver",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_arm_driver_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_arm_driver_egg-d4c49020e61c91a322f7.json",
+					"name" : "ament_cmake_python_build_arm_driver_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_arm_driver::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_arm_driver-7867be10cc0e3d9ca73a.json",
+					"name" : "ament_cmake_python_copy_arm_driver",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "arm_driver::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-arm_driver-250fd958b9826f62d8f4.json",
+					"name" : "arm_driver",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "arm_driver__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-arm_driver__cpp-61087681642fc8ac656c.json",
+					"name" : "arm_driver__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "arm_driver__py::@c8acf93237bf2007d7d7",
+					"jsonFile" : "target-arm_driver__py-c4f5e958790617600194.json",
+					"name" : "arm_driver__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "arm_driver__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-arm_driver__rosidl_generator_c-4f27c141b7b9ccf507cc.json",
+					"name" : "arm_driver__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "arm_driver__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-arm_driver__rosidl_generator_py-f8b8a824dabf14986d28.json",
+					"name" : "arm_driver__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "arm_driver__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-arm_driver__rosidl_typesupport_c-d49180d30a6d9a945453.json",
+					"name" : "arm_driver__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "arm_driver__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-arm_driver__rosidl_typesupport_c__pyext-38cbdb17edc269909a4e.json",
+					"name" : "arm_driver__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "arm_driver__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-arm_driver__rosidl_typesupport_cpp-89bc6f630ff7552883ba.json",
+					"name" : "arm_driver__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "arm_driver__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-arm_driver__rosidl_typesupport_fastrtps_c-fb61a9f381e76ad67907.json",
+					"name" : "arm_driver__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "arm_driver__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-arm_driver__rosidl_typesupport_fastrtps_c__pyext-7f1743fdf3f306425eb1.json",
+					"name" : "arm_driver__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "arm_driver__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-arm_driver__rosidl_typesupport_fastrtps_cpp-dec9b4410cb8f535f980.json",
+					"name" : "arm_driver__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "arm_driver__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-arm_driver__rosidl_typesupport_introspection_c-d04979ddbd0a34ce52d1.json",
+					"name" : "arm_driver__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "arm_driver__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-arm_driver__rosidl_typesupport_introspection_c__pyext-1c3604f13a96242bbbd1.json",
+					"name" : "arm_driver__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "arm_driver__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-arm_driver__rosidl_typesupport_introspection_cpp-df15f67f2f94c045c54c.json",
+					"name" : "arm_driver__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "arm_driver_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-arm_driver_uninstall-036f943ef93ad7150ff6.json",
+					"name" : "arm_driver_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hjarm_engineer_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hjarm_engineer_node-1567dc2b5d76e95c69fc.json",
+					"name" : "hjarm_engineer_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-59ba828e3efda58effdf.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/hanjiang/Desktop/my_try/my_try_ws/build/arm_driver",
+		"source" : "/home/hanjiang/Desktop/my_try/my_try_ws/src/arm_driver"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

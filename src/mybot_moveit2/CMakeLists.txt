@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.22)
 project(mybot_moveit2)
 
 find_package(ament_cmake REQUIRED)
+find_package(rclpy REQUIRED)
+find_package(rclcpp REQUIRED)
 
 ament_package()
 

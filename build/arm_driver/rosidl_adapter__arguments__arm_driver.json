@@ -1,0 +1,6 @@
+{
+  "package_name": "arm_driver",
+  "non_idl_tuples": [
+    "/home/hanjiang/Desktop/my_try/my_try_ws/src/arm_driver:msg/JointCommand.msg"
+  ]
+}

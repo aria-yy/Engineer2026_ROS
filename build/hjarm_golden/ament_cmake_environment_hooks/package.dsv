@@ -1,0 +1,4 @@
+source;share/hjarm_golden/local_setup.bash
+source;share/hjarm_golden/local_setup.dsv
+source;share/hjarm_golden/local_setup.sh
+source;share/hjarm_golden/local_setup.zsh

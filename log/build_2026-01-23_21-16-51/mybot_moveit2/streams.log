@@ -1,0 +1,10 @@
+[0.005s] Invoking command in '/home/hanjiang/Desktop/my_try/my_try_ws/build/mybot_moveit2': AMENT_PREFIX_PATH=/home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden:/opt/ros/humble /usr/bin/cmake --build /home/hanjiang/Desktop/my_try/my_try_ws/build/mybot_moveit2 -- -j20 -l20
+[0.020s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.142s] [31mCMake Error at CMakeLists.txt:15 (rosidl_generate_interfaces):
+[0.142s]   Unknown CMake command "rosidl_generate_interfaces".
+[0.142s] 
+[0.142s] [0m
+[0.142s] -- Configuring incomplete, errors occurred!
+[0.142s] See also "/home/hanjiang/Desktop/my_try/my_try_ws/build/mybot_moveit2/CMakeFiles/CMakeOutput.log".
+[0.143s] gmake: *** [Makefile:226：cmake_check_build_system] 错误 1
+[0.146s] Invoked command in '/home/hanjiang/Desktop/my_try/my_try_ws/build/mybot_moveit2' returned '2': AMENT_PREFIX_PATH=/home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/hanjiang/Desktop/my_try/my_try_ws/install/hjarm_golden:/opt/ros/humble /usr/bin/cmake --build /home/hanjiang/Desktop/my_try/my_try_ws/build/mybot_moveit2 -- -j20 -l20
