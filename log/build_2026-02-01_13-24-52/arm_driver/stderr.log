@@ -1,6 +1,0 @@
-/usr/bin/ld: CMakeFiles/hjarm_engineer_node.dir/src/hjarm_engineer.cpp.o: in function `HjarmEngineer::HjarmEngineer(rclcpp::NodeOptions const&)':
-hjarm_engineer.cpp:(.text+0xa54): undefined reference to `HjarmEngineer::handle_cancel(std::shared_ptr<rclcpp_action::ServerGoalHandle<control_msgs::action::FollowJointTrajectory> >)'
-collect2: error: ld returned 1 exit status
-gmake[2]: *** [CMakeFiles/hjarm_engineer_node.dir/build.make:219：hjarm_engineer_node] 错误 1
-gmake[1]: *** [CMakeFiles/Makefile2:594：CMakeFiles/hjarm_engineer_node.dir/all] 错误 2
-gmake: *** [Makefile:146：all] 错误 2

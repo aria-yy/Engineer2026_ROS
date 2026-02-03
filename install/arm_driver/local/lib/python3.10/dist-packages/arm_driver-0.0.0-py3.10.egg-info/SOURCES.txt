@@ -1,8 +1,0 @@
-setup.py
-arm_driver/__init__.py
-arm_driver.egg-info/PKG-INFO
-arm_driver.egg-info/SOURCES.txt
-arm_driver.egg-info/dependency_links.txt
-arm_driver.egg-info/top_level.txt
-arm_driver/msg/__init__.py
-arm_driver/msg/_joint_command.py

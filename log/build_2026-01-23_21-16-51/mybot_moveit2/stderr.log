@@ -1,5 +1,0 @@
-[31mCMake Error at CMakeLists.txt:15 (rosidl_generate_interfaces):
-  Unknown CMake command "rosidl_generate_interfaces".
-
-[0m
-gmake: *** [Makefile:226：cmake_check_build_system] 错误 1
