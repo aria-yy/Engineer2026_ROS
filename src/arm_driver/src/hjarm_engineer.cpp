@@ -110,6 +110,8 @@ void HjarmEngineer::serial_read_thread()
                         //for (uint8_t b : frame) printf("%02X ", b);
 
                         vector<uint8_t> data_bytes(frame.begin() + 1, frame.end() - 2);
+
+
                              for (size_t i = 0; i < data_bytes.size(); i += 4)
                                 {
                                     if (i + 4 <= data_bytes.size())
@@ -120,7 +122,26 @@ void HjarmEngineer::serial_read_thread()
                                         printf("%.4f ",value);
                                     }
                                 }        
-                        
+                        uint8_t received_checksum = *(frame.end() - 2);
+                        uint8_t calculated_checksum = 0;
+                        // 计算校验和：对每个float的每个字节累加
+                        for (size_t i = 0; i + 4 <= data_bytes.size(); i += 4)
+                        {
+                            float value;
+                            memcpy(&value, &data_bytes[i], sizeof(float));
+                            uint8_t* bytes = reinterpret_cast<uint8_t*>(&value);
+                            for (size_t b = 0; b < sizeof(float); ++b)
+                            {
+                                calculated_checksum += bytes[b];
+                            }
+                        }
+
+                        printf("checksum: received=%d, calculated=%d\n", received_checksum, calculated_checksum);
+                        if (received_checksum == calculated_checksum)
+                        {
+                            RCLCPP_INFO(this->get_logger(), "Checksum valid.");
+                        }
+
                         printf("\n");
 
                         // 清空已处理的帧数据，保留未匹配的部分（防止新帧头被截断）
