@@ -70,12 +70,6 @@ HjarmEngineer::HjarmEngineer(const rclcpp::NodeOptions & options)
 // 串口读取线程函数
 void HjarmEngineer::serial_read_thread()
 {
-    // string data_str;
-    // serial_port_.Read(data_str);
-    // RCLCPP_INFO(this->get_logger(), "Received: %s ", data_str.c_str());      
-    // const uint8_t FRAME_END[] = {0x55}; 
-    // const size_t FRAME_END_LEN = sizeof(FRAME_END)/sizeof(FRAME_END[0]);
-    
     vector<uint8_t> buffer;
     uint8_t byte; 
 
@@ -83,8 +77,6 @@ void HjarmEngineer::serial_read_thread()
     serial_port_.SetVMin(0);
     while (rclcpp::ok() && serial_port_.IsOpen())
     {
-
-            //RCLCPP_INFO(this->get_logger(), "Time: %f",send_start_time-this.now());
             serial_port_.ReadByte(byte); 
             uint8_t ubyte = static_cast<uint8_t>(byte);
             buffer.push_back(ubyte);
@@ -105,30 +97,21 @@ void HjarmEngineer::serial_read_thread()
                         // 提取完整帧（帧头到帧尾）
                         vector<uint8_t> frame(buffer.begin() + head_idx, buffer.end());
                         
-                        // 打印完整帧数据
                         RCLCPP_INFO(this->get_logger(), "收到完整帧（长度：%zu）：", frame.size());
-                        //for (uint8_t b : frame) printf("%02X ", b);
 
                         vector<uint8_t> data_bytes(frame.begin() + 1, frame.end() - 2);
 
-
-                             for (size_t i = 0; i < data_bytes.size(); i += 4)
-                                {
-                                    if (i + 4 <= data_bytes.size())
-                                    {
-                                        float value;
-                                        memcpy(&value, &data_bytes[i], sizeof(float));
-                                        //RCLCPP_INFO(this->get_logger(), "%.4f ", value);
-                                        printf("%.4f ",value);
-                                    }
-                                }        
                         uint8_t received_checksum = *(frame.end() - 2);
                         uint8_t calculated_checksum = 0;
-                        // 计算校验和：对每个float的每个字节累加
+
+                        JointCommandPacket receive_package;                                               
                         for (size_t i = 0; i + 4 <= data_bytes.size(); i += 4)
                         {
                             float value;
                             memcpy(&value, &data_bytes[i], sizeof(float));
+                            receive_package.joint_positions[i/4]=value;
+
+                            // 计算校验和：对每个float的每个字节累加
                             uint8_t* bytes = reinterpret_cast<uint8_t*>(&value);
                             for (size_t b = 0; b < sizeof(float); ++b)
                             {
@@ -136,26 +119,45 @@ void HjarmEngineer::serial_read_thread()
                             }
                         }
 
-                        printf("checksum: received=%d, calculated=%d\n", received_checksum, calculated_checksum);
+                        receive_package.checksum = received_checksum;
+                        printf("checksum: received=%d, calculated=%d\n", received_checksum, calculated_checksum);                        
                         if (received_checksum == calculated_checksum)
-                        {
+                        {                                
                             RCLCPP_INFO(this->get_logger(), "Checksum valid.");
-                        }
 
-                        printf("\n");
+                            RCLCPP_INFO(this->get_logger(), "Receive package from STM32: j1=%.3f, j2=%.3f, j3=%.3f, j4=%.3f, j5=%.3f, j6=%.3f checksum=%d",
+                                        receive_package.joint_positions[0], 
+                                        receive_package.joint_positions[1], 
+                                        receive_package.joint_positions[2],
+                                        receive_package.joint_positions[3],
+                                        receive_package.joint_positions[4],
+                                        receive_package.joint_positions[5],
+                                        receive_package.checksum
+                                    );
+                        }else{
+                            RCLCPP_WARN(this->get_logger(), "Checksum invalid!");
+                        }
 
                         // 清空已处理的帧数据，保留未匹配的部分（防止新帧头被截断）
                         buffer.erase(buffer.begin(), buffer.begin() + tail_idx + 1);
                     }
                 }
+
+                
             }
 
+            
             if (buffer.size() > 1024)
             {
-                RCLCPP_WARN(this->get_logger(), "缓存溢出，清空无效数据");
-                buffer.clear();
+                RCLCPP_WARN(this->get_logger(), "缓存溢出，尝试丢弃到下一个帧头");
+                // 尝试丢弃到下一个帧头
+                auto it = std::find(buffer.begin(), buffer.end(), 0xAA);
+                if (it != buffer.end()) {
+                    buffer.erase(buffer.begin(), it);
+                } else {
+                    buffer.clear();
+                }
             }
-        this_thread::sleep_for(chrono::milliseconds(20));
     }    
 }
 
