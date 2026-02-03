@@ -22,8 +22,7 @@ using namespace std;
 
 struct JointCommandPacket {
     uint8_t header = 0xAA;
-    float joint_positions[3];
-    float joint_velocities[3]; 
+    float joint_positions[6];
     uint8_t checksum;
     uint8_t footer = 0x55;
 } __attribute__((packed));

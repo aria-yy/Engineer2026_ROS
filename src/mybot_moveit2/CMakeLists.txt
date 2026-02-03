@@ -20,12 +20,6 @@ install(PROGRAMS
   RENAME moveit2_arm_control
 )
 
-install(PROGRAMS
-    scripts/check_point.py
-  DESTINATION lib/${PROJECT_NAME}
-  RENAME check_point
-)
-
 install(DIRECTORY config DESTINATION share/${PROJECT_NAME})
 install(DIRECTORY scripts DESTINATION share/${PROJECT_NAME})
 install(FILES .setup_assistant DESTINATION share/${PROJECT_NAME})

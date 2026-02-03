@@ -1,0 +1,38 @@
+# --- 基础设置 ---
+publish_period: 0.01 # [s] 发布控制命令的周期
+command_in_type: "speed_units" # 输入类型: "speed_units" (m/s, rad/s) or "unitless" ([-1,1])
+use_gazebo: false # 如果使用Gazebo仿真则设为true
+
+# --- 输出设置 ---
+command_out_topic: /test_group_controller/joint_trajectory
+command_out_type: "trajectory_msgs/JointTrajectory"
+
+# 发布哪些关节数据？(根据你的控制器需求选择)
+publish_joint_positions: false
+publish_joint_velocities: true
+publish_joint_accelerations: false
+
+# --- MoveIt 核心属性 ---
+move_group_name: "test_group" # 必须与 SRDF 中的规划组名完全一致！
+ee_frame_name: "Link6" # 末端执行器坐标系，必须存在于 TF 树中！
+robot_link_command_frame: "base_link" # 速度指令的参考坐标系
+
+# --- 安全与限制 ---
+check_collisions: true # 启用碰撞检测
+collision_check_rate: 10.0 # [Hz]
+self_collision_proximity_threshold: 0.01 # [m]
+scene_collision_proximity_threshold: 0.02 # [m]
+
+lower_singularity_threshold: 10.0
+hard_stop_singularity_threshold: 30.0
+
+# --- 话题名称 ---
+cartesian_command_in_topic: delta_twist_cmds # 接收笛卡尔速度指令
+joint_command_in_topic: ~/delta_joint_cmds # 接收关节速度指令
+joint_topic: /joint_states # 从这里获取关节状态
+status_topic: ~/status # 发布伺服状态
+
+# --- 其他 ---
+is_primary_planning_scene_monitor: true
+check_octomap_collisions: false
+enable_ros_service_interface: true

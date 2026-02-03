@@ -80,6 +80,12 @@ install(PROGRAMS
   RENAME moveit2_arm_control
 )
 
+install(PROGRAMS
+    scripts/keyboard_servo.py
+  DESTINATION lib/${PROJECT_NAME}
+  RENAME keyboard_servo
+)
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   set(ament_cmake_copyright_FOUND TRUE)

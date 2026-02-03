@@ -9,7 +9,22 @@ HjarmEngineer::HjarmEngineer(const rclcpp::NodeOptions & options)
     // 串口初始化
     try {
 
-        serial_port_.Open("/dev/ttyACM0");               
+        // 尝试依次打开 /dev/ttyACM0, /dev/ttyACM1, /dev/ttyACM2
+        const std::vector<std::string> port_candidates = {"/dev/ttyACM0", "/dev/ttyACM1", "/dev/ttyACM2"};
+        bool port_opened = false;
+        for (const auto& port_name : port_candidates) {
+            try {
+            serial_port_.Open(port_name);
+            RCLCPP_INFO(this->get_logger(), "Serial port opened: %s", port_name.c_str());
+            port_opened = true;
+            break;
+            } catch (const LibSerial::OpenFailed&) {
+            RCLCPP_WARN(this->get_logger(), "Failed to open serial port: %s", port_name.c_str());
+            }
+        }
+        if (!port_opened) {
+            throw LibSerial::OpenFailed("No available ACM port found.");
+        }
         serial_port_.SetBaudRate(LibSerial::BaudRate::BAUD_115200);
         serial_port_.SetCharacterSize(LibSerial::CharacterSize::CHAR_SIZE_8);
         serial_port_.SetParity(LibSerial::Parity::PARITY_NONE);
@@ -75,7 +90,7 @@ void HjarmEngineer::serial_read_thread()
             buffer.push_back(ubyte);
 
             // 检测完整帧：包含帧头0xAA且以帧尾0x55结尾
-            if (buffer.size() >= 2) // 至少包含帧头+帧尾
+            if (buffer.size() >= 2)
             {
                 // 查找帧头位置（从后往前找，避免旧帧头干扰）
                 auto head_pos = find(buffer.rbegin(), buffer.rend(), 0xAA);
@@ -165,30 +180,40 @@ void HjarmEngineer::send_joint_command_to_stm32()
     
     for (size_t j = 0; j < manipulator_.dof && j < 6; ++j) {
         send_package.joint_positions[j] = manipulator_.joints[j].position;    // 弧度
-        send_package.joint_velocities[j] = manipulator_.joints[j].velocity;   // 弧度/秒单位
+        // send_package.joint_velocities[j] = manipulator_.joints[j].velocity;   // 弧度/秒单位
     }
 
     uint8_t* data_ptr = reinterpret_cast<uint8_t*>(&send_package);
+
     send_package.checksum = 0;
-    for (size_t i = 1; i < sizeof(JointCommandPacket) - 2; i++) {
-        send_package.checksum ^= data_ptr[i];
-    
-    }
+
 
     // serial_port_.Write(cmd_msg);
     try {
+
+        for (size_t i = 0; i < 6; ++i) {
+            uint8_t* pos_bytes = reinterpret_cast<uint8_t*>(&send_package.joint_positions[i]);
+            for (size_t b = 0; b < sizeof(float); ++b) {
+                send_package.checksum += pos_bytes[b];
+            }
+        }
+
         string data_str(reinterpret_cast<const char*>(&send_package), sizeof(JointCommandPacket));
         serial_port_.Write(data_str);
-        
+
+
         send_start_time=this->now();
-        RCLCPP_INFO(this->get_logger(), "Send binary packet to STM32: j1=%.3f, j2=%.3f, j3=%.3f, j4=%.3f, j5=%.3f, j6=%.3f ",
+
+        RCLCPP_INFO(this->get_logger(), "Send binary packet to STM32: j1=%.3f, j2=%.3f, j3=%.3f, j4=%.3f, j5=%.3f, j6=%.3f checksum=%d",
                     send_package.joint_positions[0], 
                     send_package.joint_positions[1], 
                     send_package.joint_positions[2],
                     send_package.joint_positions[3],
                     send_package.joint_positions[4],
-                    send_package.joint_positions[5]   );
-                    
+                    send_package.joint_positions[5],
+                    send_package.checksum
+                   );
+                 
         //serial_read_thread();                   
     } catch (const exception& e) {
         RCLCPP_ERROR(this->get_logger(), "Failed to send binary packet: %s", e.what());
